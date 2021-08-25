@@ -33,4 +33,12 @@ class DataSource : NSObject,UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CollectionViewHeader.reusableIdentifier, for: indexPath) as? CollectionViewHeader else { fatalError("Can not load reusable view") }
+         
+        header.sectionNameLabel.text = Emoji.shared.sections[indexPath.section].rawValue
+        
+        return header
+    }
 }

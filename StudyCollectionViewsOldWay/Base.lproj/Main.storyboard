@@ -22,13 +22,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="20" id="BcQ-Ht-MOT">
                                     <size key="itemSize" width="70" height="70"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="akt-GQ-Gsh" customClass="EmojiCell" customModule="StudyCollectionViewsOldWay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <rect key="frame" x="0.0" y="50" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ln9-cI-qrf">
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -51,6 +51,26 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionViewHeader" id="m0d-m3-S0G" customClass="CollectionViewHeader" customModule="StudyCollectionViewsOldWay" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCL-Qu-CWT">
+                                            <rect key="frame" x="16" y="14.5" width="382" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zCL-Qu-CWT" firstAttribute="leading" secondItem="m0d-m3-S0G" secondAttribute="leadingMargin" constant="8" id="E9w-DR-L1e"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zCL-Qu-CWT" secondAttribute="trailing" constant="8" id="Jsl-gg-v4h"/>
+                                        <constraint firstItem="zCL-Qu-CWT" firstAttribute="centerY" secondItem="m0d-m3-S0G" secondAttribute="centerY" id="yRm-Eh-EAy"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="sectionNameLabel" destination="zCL-Qu-CWT" id="zdJ-9V-y1R"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
