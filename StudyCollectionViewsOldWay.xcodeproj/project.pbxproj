@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8414F9A226D62D7000C6FBEE /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414F9A026D62D7000C6FBEE /* Emoji.swift */; };
+		8414F9A326D62D7000C6FBEE /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414F9A126D62D7000C6FBEE /* EmojiCell.swift */; };
+		8414F9A526D62ECD00C6FBEE /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414F9A426D62ECD00C6FBEE /* DataSource.swift */; };
+		8414F9A726D6404700C6FBEE /* FlowLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414F9A626D6404700C6FBEE /* FlowLayoutDelegate.swift */; };
 		84B5509A26D5468C00F90E95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5509926D5468C00F90E95 /* AppDelegate.swift */; };
 		84B5509C26D5468C00F90E95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5509B26D5468C00F90E95 /* SceneDelegate.swift */; };
 		84B5509E26D5468C00F90E95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5509D26D5468C00F90E95 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8414F9A026D62D7000C6FBEE /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		8414F9A126D62D7000C6FBEE /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
+		8414F9A426D62ECD00C6FBEE /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		8414F9A626D6404700C6FBEE /* FlowLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutDelegate.swift; sourceTree = "<group>"; };
 		84B5509626D5468C00F90E95 /* StudyCollectionViewsOldWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyCollectionViewsOldWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B5509926D5468C00F90E95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B5509B26D5468C00F90E95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,13 +64,17 @@
 		84B5509826D5468C00F90E95 /* StudyCollectionViewsOldWay */ = {
 			isa = PBXGroup;
 			children = (
+				8414F9A026D62D7000C6FBEE /* Emoji.swift */,
+				8414F9A126D62D7000C6FBEE /* EmojiCell.swift */,
 				84B5509926D5468C00F90E95 /* AppDelegate.swift */,
-				84B5509B26D5468C00F90E95 /* SceneDelegate.swift */,
 				84B5509D26D5468C00F90E95 /* ViewController.swift */,
+				84B5509B26D5468C00F90E95 /* SceneDelegate.swift */,
 				84B5509F26D5468C00F90E95 /* Main.storyboard */,
 				84B550A226D546BA00F90E95 /* Assets.xcassets */,
 				84B550A426D546BA00F90E95 /* LaunchScreen.storyboard */,
 				84B550A726D546BA00F90E95 /* Info.plist */,
+				8414F9A426D62ECD00C6FBEE /* DataSource.swift */,
+				8414F9A626D6404700C6FBEE /* FlowLayoutDelegate.swift */,
 			);
 			path = StudyCollectionViewsOldWay;
 			sourceTree = "<group>";
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8414F9A526D62ECD00C6FBEE /* DataSource.swift in Sources */,
 				84B5509E26D5468C00F90E95 /* ViewController.swift in Sources */,
 				84B5509A26D5468C00F90E95 /* AppDelegate.swift in Sources */,
+				8414F9A326D62D7000C6FBEE /* EmojiCell.swift in Sources */,
+				8414F9A726D6404700C6FBEE /* FlowLayoutDelegate.swift in Sources */,
+				8414F9A226D62D7000C6FBEE /* Emoji.swift in Sources */,
 				84B5509C26D5468C00F90E95 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var collectionView: UICollectionView!
+    let dataSource = DataSource()
+    let flowLayoutDelegate = FlowLayoutDelegate(numberOfItemsPerRow: 5, interItemSpacing: 10)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        collectionView.dataSource = dataSource
+        collectionView.delegate = flowLayoutDelegate
+        
     }
 
 
