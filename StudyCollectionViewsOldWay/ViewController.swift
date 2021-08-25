@@ -18,7 +18,33 @@ class ViewController: UIViewController {
         
         collectionView.dataSource = dataSource
         collectionView.delegate = flowLayoutDelegate
+        self.navigationItem.leftBarButtonItem = editButtonItem
         
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        collectionView.indexPathsForVisibleItems.forEach
+        {
+            guard let cell = collectionView.cellForItem(at: $0) as? EmojiCell
+            else { return }
+            cell.isEditing = editing
+        }
+        
+        if !isEditing{
+            collectionView.indexPathsForSelectedItems?.compactMap { $0 }.forEach
+            {
+                collectionView.deselectItem(at: $0, animated: true)
+            }
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if !isEditing, identifier == "showDetail" {
+           return true
+        }
+        return false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
