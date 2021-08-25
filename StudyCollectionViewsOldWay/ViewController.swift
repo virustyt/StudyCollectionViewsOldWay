@@ -20,6 +20,20 @@ class ViewController: UIViewController {
         collectionView.delegate = flowLayoutDelegate
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showDetail",
+              let cell = sender as? EmojiCell,
+              let indexPathOfCell = collectionView.indexPath(for: cell),
+              let detailViewController = segue.destination as? DetailViewController
+        else { fatalError("Can not prepare seguei") }
+              
+        
+        let category = Emoji.shared.sections[indexPathOfCell.section]
+        let emoji = Emoji.shared.data[category]?[indexPathOfCell.item] ?? ""
+        
+        detailViewController.emoji = emoji
+    }
 
 
 }
