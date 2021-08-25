@@ -42,3 +42,11 @@ class DataSource : NSObject,UICollectionViewDataSource {
         return header
     }
 }
+
+extension DataSource {
+    func addEmoji(emoji:String, at category: Emoji.Category) {
+        guard var emojiArray = Emoji.shared.data[category] else { fatalError("Can not find needed category.") }
+        emojiArray.append(emoji)
+        Emoji.shared.data.updateValue(emojiArray, forKey: category)
+    }
+}

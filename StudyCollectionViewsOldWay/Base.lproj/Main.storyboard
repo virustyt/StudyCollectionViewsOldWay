@@ -83,7 +83,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gRP-0K-G9o" secondAttribute="trailing" id="xkc-t0-KRz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cpU-Du-ks8"/>
+                    <navigationItem key="navigationItem" id="cpU-Du-ks8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ogs-C7-YhS">
+                            <connections>
+                                <action selector="AddEmoji:" destination="BYZ-38-t0r" id="grI-c9-pcX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="gRP-0K-G9o" id="lwX-kc-agi"/>
                     </connections>

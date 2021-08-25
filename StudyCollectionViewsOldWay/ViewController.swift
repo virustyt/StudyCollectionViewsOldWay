@@ -35,6 +35,17 @@ class ViewController: UIViewController {
         detailViewController.emoji = emoji
     }
 
-
+    @IBAction func AddEmoji(_ sender: UIBarButtonItem) {
+        let (category,emoji) = Emoji.randomEmoji()
+        dataSource.addEmoji(emoji: emoji, at: category)
+        
+        guard let section = Emoji.shared.sections.firstIndex(of: category) else { fatalError("Can not find needed category.") }
+        let numberOfItems = collectionView.numberOfItems(inSection: section)
+        
+        let indexPath = IndexPath(item: numberOfItems, section: section)
+        
+        collectionView.insertItems(at: [indexPath])
+    }
+    
 }
 

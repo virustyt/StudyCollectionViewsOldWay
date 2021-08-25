@@ -36,4 +36,6 @@ class Emoji {
     let randomIndex = Int.random(in: 0..<extraEmoji.count)
     return (.smileysAndPeople, extraEmoji[randomIndex])
   }
+    
+    
 }
