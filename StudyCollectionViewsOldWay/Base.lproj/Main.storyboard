@@ -84,14 +84,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cpU-Du-ks8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ogs-C7-YhS">
-                            <connections>
-                                <action selector="AddEmoji:" destination="BYZ-38-t0r" id="grI-c9-pcX"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="ogs-C7-YhS">
+                                <connections>
+                                    <action selector="AddEmoji:" destination="BYZ-38-t0r" id="grI-c9-pcX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" systemItem="trash" id="BQ2-39-jLy">
+                                <connections>
+                                    <action selector="deleteEmoji:" destination="BYZ-38-t0r" id="rV9-QT-NcP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="ogs-C7-YhS" id="9a0-JU-uRC"/>
                         <outlet property="collectionView" destination="gRP-0K-G9o" id="lwX-kc-agi"/>
+                        <outlet property="deleteButton" destination="BQ2-39-jLy" id="o1I-7O-BFu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
