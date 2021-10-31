@@ -1,3 +1,3 @@
 # StudyCollectionViewsOldWay
 
-12-12-14
+12-12
